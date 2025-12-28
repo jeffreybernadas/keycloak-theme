@@ -64,9 +64,20 @@ export function Template(props: {
   const { kcClsx } = useKcClsx();
 
   useEffect(() => {
-    document.title =
-      documentTitle ?? msgStr('loginTitle', kcContext.realm.displayName);
-  }, [documentTitle, msgStr, kcContext.realm.displayName]);
+    // Set document title using client branding
+    document.title = documentTitle ?? `${branding.name} - Login`;
+
+    // Set favicon using client logo
+    const existingFavicon = document.querySelector("link[rel='icon']");
+    if (existingFavicon) {
+      existingFavicon.setAttribute('href', branding.logo);
+    } else {
+      const favicon = document.createElement('link');
+      favicon.rel = 'icon';
+      favicon.href = branding.logo;
+      document.head.appendChild(favicon);
+    }
+  }, [documentTitle, branding.name, branding.logo]);
 
   useSetClassName({
     qualifiedName: 'html',
