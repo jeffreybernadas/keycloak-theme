@@ -1,14 +1,9 @@
 {
     "email-test": {
-        "subject": "Test de courriel",
-        "greeting": "Bonjour",
-        "passwordUpdate": "Vous avez mis à jour le mot de passe de votre compte Twitch le {{date}}. Si c'était vous, aucune autre action n'est requise.",
-        "passwordReset": "Cependant, si vous n'avez PAS effectué ce changement de mot de passe, veuillez réinitialiser immédiatement le mot de passe de votre compte.",
-        "passwordAdvice": "N'oubliez pas d'utiliser un mot de passe à la fois fort et unique pour votre compte Twitch. Pour en savoir plus sur la création d'un mot de passe fort et unique,",
-        "loginButton": "Connexion à Inspark",
-        "contactSupport": "Vous avez encore des questions ? Veuillez contacter le support {{realmName}}",
-        "thanks": "Merci,",
-        "supportTeam": "Équipe de support {{realmName}}"
+        "subject": "Courriel de test",
+        "greeting": "Bonjour {{firstName}}",
+        "message": "Ceci est un courriel de test de {{brandName}}. Si vous avez reçu ce courriel, votre configuration de messagerie fonctionne correctement.",
+        "thanks": "Cordialement,"
     },
     "email-update-confirmation": {
         "subject": "Vérifier le nouveau courriel",

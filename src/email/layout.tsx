@@ -10,10 +10,10 @@ import {
     Section,
     Text
 } from "jsx-email";
-import { createVariablesHelper } from "keycloakify-emails/variables";
 import type { PropsWithChildren, ReactNode } from "react";
-import i18n from "./i18n";
-import { primaryColor, companyLogo } from "./constants";
+import { defaultEmailBranding } from "./config/branding.config";
+// Import to ensure i18n is initialized for templates
+import "./i18n";
 
 const main = {
     backgroundColor: "#f6f9fc",
@@ -32,14 +32,12 @@ const content = {
 };
 
 const logo = {
-    display: "flex",
-    justifyContent: "center",
-    alingItems: "center",
+    textAlign: "center" as const,
     padding: 30
 };
 
 const logoImage = {
-    display: "block",
+    display: "inline-block",
     border: "0",
     outline: "none",
     textDecoration: "none",
@@ -62,7 +60,7 @@ const sectionBorder = {
 };
 
 const sectionCenter = {
-    borderBottom: `1px solid ${primaryColor}`,
+    borderBottom: `1px solid ${defaultEmailBranding.primaryColor}`,
     width: "102px"
 };
 
@@ -73,15 +71,11 @@ const footer = {
 
 const currentYear = new Date().getFullYear();
 
-const { exp } = createVariablesHelper("email-test.ftl");
-
 export const EmailLayout = ({
     locale,
     children,
     preview
 }: PropsWithChildren<{ preview: ReactNode; locale: string }>) => {
-    const t = i18n.getFixedT(locale);
-
     return (
         <Html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
             <Head />
@@ -90,12 +84,15 @@ export const EmailLayout = ({
                 <Container style={container}>
                     <Section style={logo}>
                         <Img
-                            src={companyLogo}
-                            width={200}
+                            src={defaultEmailBranding.logo}
+                            width={50}
                             height={50}
-                            alt="Company Name"
+                            alt={defaultEmailBranding.name}
                             style={logoImage}
                         />
+                        <Text style={{ fontSize: "18px", fontWeight: "600", margin: "10px 0 0 0", color: "#1a1a1a" }}>
+                            {defaultEmailBranding.name}
+                        </Text>
                     </Section>
 
                     <Section style={sectionsBorders}>
@@ -118,12 +115,9 @@ export const EmailLayout = ({
                     <Section style={footer}>
                         <Row>
                             <Text style={{ textAlign: "center", color: "#706a7b" }}>
-                                {t("footer.allRightsReserved", {
-                                    currentYear,
-                                    realmName: exp("realmName")
-                                })}{" "}
+                                © {currentYear} {defaultEmailBranding.name}, All Rights Reserved
                                 <br />
-                                {t("footer.address")}
+                                {defaultEmailBranding.address}
                             </Text>
                         </Row>
                     </Section>

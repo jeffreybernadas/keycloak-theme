@@ -1,14 +1,9 @@
 {
     "email-test": {
-        "subject": "Email Test",
-        "greeting": "Hi",
-        "passwordUpdate": "You updated the password for your Twitch account on {{date}}. If this was you, then no further action is required.",
-        "passwordReset": "However if you did NOT perform this password change, please reset your account password immediately.",
-        "passwordAdvice": "Remember to use a password that is both strong and unique to your Twitch account. To learn more about how to create a strong and unique password,",
-        "loginButton": "Login to Inspark",
-        "contactSupport": "Still have questions? Please contact {{realmName}} Support",
-        "thanks": "Thanks,",
-        "supportTeam": "{{realmName}}, Support Team"
+        "subject": "Test Email",
+        "greeting": "Hi {{firstName}}",
+        "message": "This is a test email from {{brandName}}. If you received this email, your email configuration is working correctly.",
+        "thanks": "Best regards,"
     },
     "email-update-confirmation": {
         "subject": "Verify new email",
