@@ -21,7 +21,6 @@ export type KcContextExtension = {
     // NOTE: Here you can declare more properties to extend the KcContext
     // See: https://docs.keycloakify.dev/faq-and-help/some-values-you-need-are-missing-from-in-kccontext
     client: {
-        clientId?: string;
         baseUrl?: string;
     };
     darkMode?: boolean;
