@@ -14,6 +14,9 @@ importers:
       '@keycloak/keycloak-admin-client':
         specifier: 26.3.5
         version: 26.3.5
+      '@keycloakify/keycloak-account-ui':
+        specifier: ~260305.0.1
+        version: 260305.0.1(47e6a5d8e19de9818c74dc1abc3af731)
       '@keycloakify/keycloak-admin-ui':
         specifier: ~260305.0.0
         version: 260305.0.0(52344c0622354b6f0a5c71d8da28ba65)
@@ -717,6 +720,25 @@ packages:
   '@keycloak/keycloak-admin-client@26.3.5':
     resolution: {integrity: sha512-gSVyKmL4FU52adIBtT3bennsvRgSYOfQh2JRgV89OE3UMw3ZB0ooVAvMoPvhHhqXLXIXjC1H4ai0R8iVRxLXbg==}
     engines: {node: '>=18'}
+
+  '@keycloakify/keycloak-account-ui@260305.0.1':
+    resolution: {integrity: sha512-it5VpXaYOrhJEWicDB/5KPMUKdMZZxit8tGkfBfxKcysGapqcNtDkJwsOSUUBn/GCG3WeONU3VuYL5jSiY6IFw==}
+    peerDependencies:
+      '@keycloakify/keycloak-ui-shared': ~260305.0.0
+      '@patternfly/patternfly': ^5.4.2
+      '@patternfly/react-core': ^5.4.14
+      '@patternfly/react-icons': ^5.4.2
+      '@patternfly/react-table': ^5.4.16
+      '@types/lodash-es': ^4.17.12
+      '@types/react': ^18.3.18
+      i18next: ^25.2.1
+      i18next-fetch-backend: ^6.0.0
+      keycloak-js: ^26.2.0
+      lodash-es: ^4.17.21
+      react: ^18.3.1
+      react-hook-form: ^7.59.0
+      react-i18next: ^15.5.3
+      react-router-dom: ^6.30.1
 
   '@keycloakify/keycloak-admin-ui@260305.0.0':
     resolution: {integrity: sha512-Hk73DzPf2DjEWEkfpfed8KN3m/gsnwTDUeKSrK1qOmvCEbcLXaY3P7FazPKt0udOccI+dRvTuV+WMv0rPAEzRw==}
@@ -3655,6 +3677,25 @@ snapshots:
       camelize-ts: 3.0.0
       url-join: 5.0.0
       url-template: 3.1.1
+
+  '@keycloakify/keycloak-account-ui@260305.0.1(47e6a5d8e19de9818c74dc1abc3af731)':
+    dependencies:
+      '@keycloakify/keycloak-ui-shared': 260305.0.0(@keycloak/keycloak-admin-client@26.3.5)(@patternfly/react-core@5.4.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(@patternfly/react-icons@5.4.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(@patternfly/react-styles@5.4.1)(@patternfly/react-table@5.4.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(@types/lodash-es@4.17.12)(@types/react@19.2.7)(i18next@25.7.3(typescript@5.9.3))(keycloak-js@26.2.2)(lodash-es@4.17.22)(react-hook-form@7.69.0(react@19.2.3))(react-i18next@15.7.4(i18next@25.7.3(typescript@5.9.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3))(react@19.2.3)
+      '@patternfly/patternfly': 5.4.2
+      '@patternfly/react-core': 5.4.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@patternfly/react-icons': 5.4.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@patternfly/react-table': 5.4.16(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@types/lodash-es': 4.17.12
+      '@types/react': 19.2.7
+      i18next: 25.7.3(typescript@5.9.3)
+      i18next-fetch-backend: 6.0.0
+      keycloak-js: 26.2.2
+      lodash-es: 4.17.22
+      react: 19.2.3
+      react-hook-form: 7.69.0(react@19.2.3)
+      react-i18next: 15.7.4(i18next@25.7.3(typescript@5.9.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
+      react-router-dom: 6.30.2(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      tsafe: 1.8.12
 
   '@keycloakify/keycloak-admin-ui@260305.0.0(52344c0622354b6f0a5c71d8da28ba65)':
     dependencies:
