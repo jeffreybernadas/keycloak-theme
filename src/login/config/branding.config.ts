@@ -5,6 +5,7 @@ export interface ClientBranding {
   name: string;
   logo: string;
   welcomeMessage: string;
+  projectsUrl?: string;
 }
 
 export const clientBranding: Record<string, ClientBranding> = {
@@ -20,4 +21,5 @@ export const defaultBranding: ClientBranding = {
   logo: jbLogo,
   welcomeMessage:
     'This is the default theme of this keycloak realm. Either this client is not configured properly or you are just completely lost.',
+  projectsUrl: 'https://jeffreybernadas.com/#projects',
 };

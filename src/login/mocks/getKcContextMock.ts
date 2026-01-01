@@ -19,7 +19,7 @@ import type {
 const kcContextExtension: KcContextExtension = {
   themeName: themeNames[0],
   client: {
-    clientId: 'minifi', // Uncomment to test Minifi branding
+    // clientId: 'minifi', // Uncomment to test Minifi branding
     baseUrl: 'https://my-theme.keycloakify.dev',
   },
   darkMode: true,
