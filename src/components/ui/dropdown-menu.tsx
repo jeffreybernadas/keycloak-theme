@@ -9,6 +9,8 @@
 
 /* eslint-disable */
 
+// @ts-nocheck - react-i18next v15 + React 19 type conflict
+
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react"
 import * as React from "react"

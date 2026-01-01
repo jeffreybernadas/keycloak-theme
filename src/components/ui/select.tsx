@@ -9,6 +9,8 @@
 
 /* eslint-disable */
 
+// @ts-nocheck - react-i18next v15 + React 19 type conflict
+
 import * as SelectPrimitive from "@radix-ui/react-select"
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react"
 import * as React from "react"

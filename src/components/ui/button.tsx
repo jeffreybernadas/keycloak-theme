@@ -9,6 +9,8 @@
 
 /* eslint-disable */
 
+// @ts-nocheck - react-i18next v15 + React 19 type conflict
+
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import * as React from "react"
